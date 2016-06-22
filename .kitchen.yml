@@ -1,0 +1,38 @@
+driver:
+  name: docker
+  use_sudo: <% if ENV['TRAVIS'] then true else false end %>
+
+platforms:
+
+  - name: ubuntu-trusty-docker
+    driver_config:
+      use_cache: true
+      image: ubuntu:14.04
+
+  - name: ubuntu-wily-docker
+    driver_config:
+      use_cache: true
+      image: ubuntu:15.10
+
+  - name: ubuntu-xenial-docker
+    driver_config:
+      use_cache: true
+      image: ubuntu:16.04
+
+provisioner:
+  name: ansible_push
+  idempotency_test: true
+  support_older_version: true
+  playbook: kitchen-playbook.yml
+
+suites:
+  - name: teamviewer
+    provisioner:
+      extra_vars:
+        role_under_test: "teamviewer"
+
+verifier:
+# TODO
+#  name: serverspec
+#  additional_install_command: mkdir -p /tmp/kitchen
+  name: shell

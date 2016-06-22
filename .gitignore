@@ -1,0 +1,6 @@
+*~
+/.bundle/
+/Gemfile.lock
+/.kitchen/
+*.swp
+/vendor/
