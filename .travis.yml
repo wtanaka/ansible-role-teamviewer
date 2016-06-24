@@ -19,3 +19,6 @@ script:
 
 after_failure:
   - cat .kitchen/logs/*.log | grep -v '^I, '
+
+notifications:
+  webhooks: https://galaxy.ansible.com/api/v1/notifications/

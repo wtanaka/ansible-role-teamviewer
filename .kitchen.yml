@@ -32,7 +32,7 @@ suites:
   - name: teamviewer
     provisioner:
       extra_vars:
-        role_under_test: "teamviewer"
+        role_under_test: "ansible-role-teamviewer"
 
 verifier:
 # TODO
