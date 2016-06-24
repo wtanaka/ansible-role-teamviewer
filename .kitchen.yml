@@ -14,10 +14,13 @@ platforms:
       use_cache: true
       image: ubuntu:15.10
 
-  - name: ubuntu-xenial-docker
-    driver_config:
-      use_cache: true
-      image: ubuntu:16.04
+# Non-deterministically, gets this error:
+# fatal: [ubuntu-xenial-docker] => failed to parse: bash: warning: setlocale:
+# LC_ALL: cannot change locale (en_US.UTF-8)
+# - name: ubuntu-xenial-docker
+#   driver_config:
+#     use_cache: true
+#     image: ubuntu:16.04
 
 provisioner:
   name: ansible_push
