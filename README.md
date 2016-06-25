@@ -1,7 +1,7 @@
-Role Name
-=========
+wtanaka.teamviewer
+==================
 
-Install TeamViewer
+This ansible role installs TeamViewer
 
 Example Playbook
 ----------------
