@@ -1,11 +1,5 @@
 ---
-- name: apt-get update
-  apt: update_cache=true cache_valid_time=3600
-  sudo: yes
-
-- name: install python-pycurl
-  apt: name=python-pycurl
-  sudo: yes
+- include: compat.yml
 
 # Update APT configuration
 - name: add universe repository
