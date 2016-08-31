@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/wtanaka/ansible-role-teamviewer.svg?branch=master)](https://travis-ci.org/wtanaka/ansible-role-teamviewer)
+[![CircleCI](https://circleci.com/gh/wtanaka/ansible-role-teamviewer.svg?style=svg)](https://circleci.com/gh/wtanaka/ansible-role-teamviewer)
 
 wtanaka.teamviewer
 ==================
