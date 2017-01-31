@@ -1,4 +1,4 @@
 ---
 # http://askubuntu.com/questions/362951/installed-teamviewer-using-a-64-bits-system-but-i-get-a-dependency-error/363083
 teamviewer_architecture: "{% if ansible_architecture == 'x86_64' %}i386{% else %}i386{% endif %}"
-teamviewer_url_deb: "http://download.teamviewer.com/download/teamviewer_{{teamviewer_architecture}}.deb"
+teamviewer_url_deb: "https://download.teamviewer.com/download/teamviewer_{{teamviewer_architecture}}.deb"
