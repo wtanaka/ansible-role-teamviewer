@@ -6,7 +6,7 @@ galaxy_info:
     conferencing and file transfer
   company: http://wtanaka.com/
   license: GPLv2
-  min_ansible_version: 1.4.4
+  min_ansible_version: 1.4
 
   # Optionally specify the branch Galaxy will use when accessing the GitHub
   # repo for this role. During role install, if no tags are available,
