@@ -4,7 +4,7 @@
 # Update APT configuration
 - name: add universe repository
   apt_repository: >
-    repo="deb http://archive.ubuntu.com/ubuntu trusty universe"
+    repo="deb http://archive.ubuntu.com/ubuntu {{ ansible_distribution_release }} universe"
     state=present
   register: universe_result
   sudo: yes
