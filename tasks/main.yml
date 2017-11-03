@@ -4,7 +4,7 @@
 # Update APT configuration
 - name: add universe repository
   apt_repository: >
-    repo="deb http://archive.ubuntu.com/ubuntu trusty universe"
+    repo="deb http://archive.ubuntu.com/ubuntu {{ ansible_distribution_release }} universe"
     state=present
   register: universe_result
   sudo: yes
@@ -36,10 +36,16 @@
   changed_when: false
 
 - name: Download Ubuntu teamviewer package
-  command: wget -O {{teamviewer_tmp_deb}} {{teamviewer_url_deb}}
-  args:
-    creates: "{{teamviewer_tmp_deb}}"
-  when: check_teamviewer.rc == 1
+  get_url:
+    url: "{{teamviewer_url_deb}}"
+    dest: "{{teamviewer_tmp_deb}}"
+    mode: 0440
+
+  #- name: Download Ubuntu teamviewer package
+  #  command: wget -O {{teamviewer_tmp_deb}} {{teamviewer_url_deb}}
+  #  args:
+  #    creates: "{{teamviewer_tmp_deb}}"
+  #  when: check_teamviewer.rc == 1
 
 - name: Install Ubuntu teamviewer package
   sudo: true
